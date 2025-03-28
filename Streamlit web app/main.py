@@ -1,3 +1,18 @@
+import subprocess
+import sys
+
+# Function to install missing packages
+def install_package(package):
+    subprocess.run([sys.executable, "-m", "pip", "install", package], check=True)
+
+# Try to import, install if missing
+try:
+    from streamlit_image_coordinates import streamlit_image_coordinates
+except ModuleNotFoundError:
+    install_package("streamlit-image-coordinates")
+    from streamlit_image_coordinates import streamlit_image_coordinates  # Retry import
+
+
 import tempfile
 import numpy as np
 
