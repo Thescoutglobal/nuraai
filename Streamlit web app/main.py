@@ -10,7 +10,7 @@ try:
     from streamlit_image_coordinates import streamlit_image_coordinates
 except ModuleNotFoundError:
     install_package("streamlit-image-coordinates")
-    from streamlit_image_coordinates import streamlit_image_coordinates  # Retry import
+    from streamlit_image_coordinates import streamlit_image_coordinates
 
 
 import tempfile
